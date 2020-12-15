@@ -1,6 +1,6 @@
 __author__ = 'akhtyamovpavel'
 
-class Language:
+class Language(object):
 
     def get_list(self):
         pass
