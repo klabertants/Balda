@@ -17,8 +17,6 @@ urlpatterns = [
    url(r'^register/$', views.register, name='register'),
    url(r'^profile/(?P<username>\w+)$',
        views.view_profile, name='view_profile'),
-   url(r'^profile/edit/$', views.edit_profile_page,
-       name='edit_profile_page'),
    url(r'^profile/$', views.profile, name='profile'),
 
 

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from os import getcwd
 from random import Random
 from functools import wraps
@@ -11,7 +13,7 @@ TEST_QUERY = "SELECT 1"
 CHECK_WORD_QUERY = "SELECT word FROM Words WHERE (id = root_id AND word = ?)"
 
 
-class Dictionary():
+class Dictionary(object):
     sz = 100
 
     pool_dictionary = dict()

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import datetime
 import json
 
@@ -21,7 +23,6 @@ from balda_game.lib.dictionary.SingletonDictionary import dictionary
 from balda_game.lang.RussianLanguage import RussianLanguage
 from balda_game.models import UserPlayer, GameModel
 from balda_game.forms.CreationUserForm import CreationUserForm
-from balda_game.forms.EditProfileForm import EditProfileForm
 
 
 def index(request):
@@ -209,10 +210,3 @@ def play_with_bot(request):
 
     json_result = {'game': game_id}
     return HttpResponse(json.dumps(json_result), content_type="application/json")
-
-
-@login_required
-def edit_profile_page(request):
-    form = EditProfileForm(instance=request.user.userplayer)
-    print(form['first_name'].value())
-    return render(request, 'edit_profile_page.html', {'form': form})

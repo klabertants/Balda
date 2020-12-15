@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from balda_game.lang.Language import Language
 
 __author__ = 'akhtyamovpavel'

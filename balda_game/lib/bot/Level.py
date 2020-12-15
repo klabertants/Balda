@@ -10,7 +10,7 @@ class Level(Enum):
     HARDEST = 100500
 
 
-def get_bot_by_level(level: Level):
+def get_bot_by_level(level):
     if level == Level.EASY:
         return User.objects.get(username='EASYBOT')
     if level == Level.MEDIUM:

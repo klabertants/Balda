@@ -5,7 +5,7 @@ from balda_game.lib.field.Letter import CellLetter
 __author__ = 'akhtyamovpavel'
 
 
-def serialize_cell_letter_to_json(cell_letter: CellLetter):
+def serialize_cell_letter_to_json(cell_letter):
     return json.dumps({'x': cell_letter.x, 'y': cell_letter.y, 'letter': cell_letter.letter})
 
 
@@ -18,7 +18,7 @@ def serialize_word_to_json(word):
     return json.dumps([serialize_cell_letter_to_json(cell_letter) for cell_letter in word])
 
 
-def serialize_move_to_json(move: Move):
+def serialize_move_to_json(move):
     json_word = {
         "added_letter": serialize_cell_letter_to_json(move.get_added_letter()),
         "word": serialize_word_to_json(move.get_word_structure())

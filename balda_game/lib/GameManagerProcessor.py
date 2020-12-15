@@ -82,7 +82,7 @@ class GameManagerProcessor:
                     return self.cnt
         return -1
 
-    def add_bot(self, user, level: Level):
+    def add_bot(self, user, level):
 
         game_log_structure = GameModel()
         game_log_structure.first_user = user
